@@ -27,7 +27,7 @@
     <!-- Main content container, centered and responsive -->
     <main class="flex flex-col items-center justify-center w-full text-center">
         <!-- Title section -->
-        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 tracking-widest leading-snug">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 sm:mb-6 tracking-widest leading-snug">
             Let Children…
         </h1>
 
@@ -61,8 +61,8 @@
 
         <!-- Statistics and call to action -->
         <div class="mt-8 text-xl sm:text-2xl lg:text-3xl max-w-xl mx-auto space-y-4 font-bold text-center">
-            <p>as of August 31, 2025, <span class="text-red-600">Over 50,000</span> children have been killed, and 28/day more are being killed or starved to death.</p>
-            <p>Join the movement to Let Children LIVE.</p>
+            <p>As of August 31, 2025, <span class="text-red-600">Over 50,000</span> children have been killed, and <span class="text-red-600">28/day</span> more are being killed or starved.</p>
+            <p>Join the movement to Let Children <span class="text-red-600">LIVE</span>.</p>
         </div>
 
         <!-- Quote section -->
@@ -166,17 +166,33 @@
             const q = query(collection(db, publicCollectionPath));
             onSnapshot(q, (querySnapshot) => {
                 supportersList.innerHTML = '';
-                const supporters = [];
+                
+                // Add the new default supporters
+                const staticSupporters = [
+                    "Veterans Let Children <span class='text-red-600'>LIVE</span>",
+                    "Americans Let Children <span class='text-red-600'>LIVE</span>",
+                    "Patriots Let Children <span class='text-red-600'>LIVE</span>",
+                    "Mothers Let Children <span class='text-red-600'>LIVE</span>",
+                    "Fathers Let Children <span class='text-red-600'>LIVE</span>",
+                    "Grandmothers Let Children <span class='text-red-600'>LIVE</span>",
+                    "Grandfathers Let Children <span class='text-red-600'>LIVE</span>",
+                    "Soldiers Let Children <span class='text-red-600'>LIVE</span>",
+                    "Students Let Children <span class='text-red-600'>LIVE</span>"
+                ];
+
+                const firestoreSupporters = [];
                 querySnapshot.forEach((doc) => {
-                    supporters.push({ id: doc.id, ...doc.data() });
+                    firestoreSupporters.push(doc.data().name);
                 });
 
-                if (supporters.length > 0) {
-                    supporters.forEach(supporter => {
-                        const supporterName = document.createElement('p');
-                        supporterName.classList.add('p-2', 'bg-zinc-50', 'rounded-md', 'shadow-sm');
-                        supporterName.textContent = supporter.name;
-                        supportersList.appendChild(supporterName);
+                const combinedSupporters = [...staticSupporters, ...firestoreSupporters];
+
+                if (combinedSupporters.length > 0) {
+                    combinedSupporters.forEach(supporterName => {
+                        const supporterP = document.createElement('p');
+                        supporterP.classList.add('p-2', 'bg-zinc-50', 'rounded-md', 'shadow-sm');
+                        supporterP.innerHTML = supporterName;
+                        supportersList.appendChild(supporterP);
                     });
                 } else {
                     supportersList.innerHTML = '<p class="text-center text-zinc-400">No supporters yet. Be the first!</p>';
