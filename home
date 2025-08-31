@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let Children LIVE</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font for an old-ad feel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 0.05em;
+        }
+        .protest-quote {
+            line-height: 1.5;
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="bg-zinc-50 text-zinc-800 min-h-screen flex flex-col items-center justify-center p-4">
+
+    <!-- Main content container, centered and responsive -->
+    <main class="flex flex-col items-center justify-center w-full text-center">
+        <!-- Title section -->
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 tracking-widest leading-snug">
+            Let Children…
+        </h1>
+
+        <!-- List of activities -->
+        <div class="space-y-2 text-base sm:text-lg md:text-xl">
+            <p>Play outside.</p>
+            <p>Learn.</p>
+            <p>Imagine.</p>
+            <p>Make a mess in their room.</p>
+            <p>Pray.</p>
+            <p>Yell at their parents.</p>
+            <p>Run.</p>
+            <p>Try-out for sports.</p>
+            <p>Read a book.</p>
+            <p>Get their first A.</p>
+            <p>Climb trees.</p>
+            <p>Make friends.</p>
+            <p>Draw pictures.</p>
+            <p>Eat ice cream.</p>
+            <p>Ask "why".</p>
+            <p>Dance.</p>
+            <p>Believe in magic.</p>
+        </div>
+
+        <!-- The "LIVE." part in red -->
+        <div class="mt-6 sm:mt-8">
+            <h2 class="text-red-600 font-extrabold text-7xl sm:text-8xl lg:text-9xl leading-tight tracking-tighter drop-shadow-lg">
+                LIVE.
+            </h2>
+        </div>
+    </main>
+
+    <!-- Footer section with the quote -->
+    <footer class="mt-6 mb-2 max-w-xs sm:max-w-sm mx-auto">
+        <p class="protest-quote italic text-sm sm:text-base md:text-lg text-zinc-600">
+            “To sin by silence<br>
+            when they should protest<br>
+            makes cowards of men”<br>
+            - Abraham Lincoln
+        </p>
+    </footer>
+
+</body>
+</html>
