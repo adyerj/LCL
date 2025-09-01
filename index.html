@@ -6,47 +6,48 @@
     <title>Let Children LIVE</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Font for an old-ad feel -->
+    <!-- Google Font for a bold, modern feel -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     
     <style>
         body {
-            font-family: 'Playfair Display', serif;
-            letter-spacing: 0.05em;
+            font-family: 'Montserrat', sans-serif;
         }
         .protest-quote {
             line-height: 1.5;
             text-align: center;
         }
+        .arrow-bounce {
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
     </style>
 </head>
-<body class="bg-zinc-50 text-zinc-800 min-h-screen flex flex-col items-center justify-between p-4">
+<body class="bg-zinc-950 text-white min-h-screen flex flex-col items-center p-4">
 
-    <!-- Main content container, centered and responsive -->
-    <main class="flex flex-col items-center justify-center w-full text-center">
+    <!-- Above-the-fold content container -->
+    <div class="flex flex-col items-center justify-center w-full min-h-[calc(100vh-2rem)] text-center">
         
-        <!-- Title section -->
+        <!-- "Let Children" title -->
         <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 sm:mb-6 tracking-widest leading-snug">
             Let Children
         </h1>
 
-        <!-- List of activities -->
-        <div class="space-y-2 text-base sm:text-lg md:text-xl">
-            <p>Play.</p>
-            <p>Learn.</p>
-            <p>Imagine.</p>
-            <p>Make a mess.</p>
-            <p>Pray.</p>
-            <p>Run.</p>
-            <p>Read a book.</p>
-            <p>Graduate.</p>
-            <p>Climb trees.</p>
-            <p>Make friends.</p>
-            <p>Go to School.</p>
-            <p>Believe.</p>
-            <p>Above all...</p>
+        <!-- Readable paragraph of words -->
+        <div class="mt-4 max-w-xl mx-auto text-center font-bold italic text-lg sm:text-xl text-zinc-400 px-4">
+            <p>Play outside. Learn. Imagine. Make a mess in their room. Pray. Yell at their parents. Run. Try-out for sports. Read a book. Get their first A. Climb trees. Make friends. Draw pictures. Eat ice cream. Ask "why". Dance. Believe in magic. Sing. Explore. Dream. Grow. And above all...</p>
         </div>
 
         <!-- The "LIVE." part in red -->
@@ -56,150 +57,63 @@
             </h2>
         </div>
 
-        <!-- Statistics and call to action -->
-        <div class="mt-8 text-xl sm:text-2xl lg:text-3xl max-w-xl mx-auto space-y-4 font-bold text-center">
-            <p>As of August 31, 2025, <span class="text-red-600">Over 50,000</span> children have already been killed, and <span class="text-red-600">hundreds of thousands</span> are actively being starved by Israel.</p>
-             <p>Ask ALL Representatives TODAY:</p>
-                <!-- Question section -->
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 sm:mb-6 tracking-widest leading-snug">
-            "Will you vote and act now to Let Children Live?"
-        </h1>
-                <p>If YES, <span class="text-red-600">Immediate Arms Embargo and Publicly End ALL Military Escelation</span>.</p>
+        <!-- Subtle down arrow to indicate more content -->
+        <div class="absolute bottom-8 sm:bottom-12 left-1/2 transform -translate-x-1/2 mt-8">
+            <svg class="h-12 w-12 text-zinc-400 arrow-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+        </div>
+    </div>
+
+    <!-- Below-the-fold content -->
+    <main class="flex flex-col items-center justify-center w-full text-center mt-12 sm:mt-16 px-4">
+        <!-- Content section -->
+        <div class="max-w-3xl mx-auto text-center text-lg sm:text-xl lg:text-2xl font-light text-zinc-300 space-y-8">
+            <p>Gaza’s children are dying. Over <span class="text-red-600">50,000</span> children have been killed or injured since October 2023, with <span class="text-red-600">1,309</span> killed and <span class="text-red-600">3,738</span> injured since March 2025 alone (UNICEF, May 2025). Bombed schools, starved families, and shattered lives—this is a war on childhood.</p>
+            <p>International law, including the Fourth Geneva Convention and the Convention on the Rights of the Child, demands their protection. Yet, you—elected and appointed officials—stay silent, refuse to act, and worse, continue to fund and enable this daily slaughter and war on children.</p>
+            <p class="font-bold">Will you act NOW to Let Children Live?</p>
+            
+            <p class="font-bold">We demand immediate action:</p>
+            <ul class="text-left max-w-xl mx-auto space-y-4 font-normal">
+                <li><strong class="font-bold text-red-600">1. Stop the Attacks:</strong> End all support for targeting schools, hospitals, and civilian areas (Fourth Geneva Convention, Article 18).</li>
+                <li><strong class="font-bold text-red-600">2. Deliver Humanitarian Aid:</strong> Ensure unimpeded food, water, and medical supplies reach Gaza’s 1 million children. No more blocked aid trucks (UNICEF, 2025).</li>
+                <li><strong class="font-bold text-red-600">3. Allow Press Access:</strong> Permit journalists from all countries to enter Gaza, verify aid delivery, and expose the truth. Transparency saves lives.</li>
+            </ul>
+
+            <p class="font-bold">Your Legal Duty:</strong> These are not requests—they’re obligations under treaties your nations signed. Every delay or vote against protection makes you complicit in war crimes against children (Rome Statute, Article 8).</p>
+            <p class="font-bold text-red-600">Gaza’s children can’t wait. Sign now to demand officials use their power to stop the killing, deliver aid, and let the world see the truth.</p>
+            
+            <p class="font-bold">Ask them:</p>
+            <p class="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-widest leading-snug">Will you act now to Let Children <span class="text-red-600">LIVE</span>?</p>
+            
+            <p class="font-bold">Why This Matters:</p>
+            <ul class="text-left max-w-xl mx-auto space-y-4 font-normal">
+                <li><strong class="font-bold text-red-600">&bull;</strong> <span class="text-red-600">12,000</span> children face acute malnutrition; famine grips Gaza (IPC, August 2025).</li>
+                <li><strong class="font-bold text-red-600">&bull;</strong> <span class="text-red-600">658,760</span> children have lost access to education, with schools bombed or used as shelters (UN, 2024).</li>
+            </ul>
+
+            <p class="font-bold">Sign and share now—hold leaders accountable for Gaza’s children!</p>
+
+            <button class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+                Sign Petition
+            </button>
         </div>
 
         <!-- Quote section -->
         <div class="mt-8 mb-4 max-w-xs sm:max-w-sm mx-auto">
-            <p class="protest-quote italic text-sm sm:text-base md:text-lg text-zinc-600">
+            <p class="protest-quote italic text-lg sm:text-xl md:text-2xl text-zinc-400">
                 “To sin by silence<br>
                 when they should protest<br>
                 makes cowards of men”<br>
                 - Abraham Lincoln
             </p>
         </div>
-
-        
-
-            
-        </div>
     </main>
 
-    
-
-    <!-- Firebase SDKs -->
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-        import { getAuth, signInAnonymously, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
-        import { getFirestore, collection, addDoc, onSnapshot, query, setLogLevel } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
-
-        // IMPORTANT: Use the provided global variables for app setup
-        const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
-        const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};
-        const authToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
-
-        // Set log level to debug for Firestore
-        setLogLevel('debug');
-
-        const app = initializeApp(firebaseConfig);
-        const auth = getAuth(app);
-        const db = getFirestore(app);
-
-        // UI elements
-        const form = document.getElementById('supporter-form');
-        const nameInput = document.getElementById('supporter-name');
-        const supportersList = document.getElementById('supporters-list');
-        const formMessage = document.getElementById('form-message');
-
-        // Firestore paths
-        const publicCollectionPath = `/artifacts/${appId}/public/data/supporters`;
-        let userId = null;
-
-        const handleAuth = async () => {
-            try {
-                if (authToken) {
-                    await signInWithCustomToken(auth, authToken);
-                } else {
-                    await signInAnonymously(auth);
-                }
-                userId = auth.currentUser?.uid || crypto.randomUUID();
-                // We're authenticated, now we can set up the listeners and forms
-                setupListeners();
-            } catch (error) {
-                console.error("Firebase Auth Error:", error);
-                formMessage.textContent = "Error: Could not authenticate. Try again later.";
-            }
-        };
-
-        const setupListeners = () => {
-            // Display supporter ID for debugging/sharing
-            const userDisplay = document.createElement('p');
-            userDisplay.classList.add('text-xs', 'text-zinc-400', 'mt-2', 'text-center');
-            userDisplay.textContent = `Your ID: ${userId}`;
-            document.body.appendChild(userDisplay);
-
-            // Set up real-time listener for supporters
-            const q = query(collection(db, publicCollectionPath));
-            onSnapshot(q, (querySnapshot) => {
-                supportersList.innerHTML = '';
-                
-                // Add the new default supporters
-                const staticSupporters = [
-                    "Veterans Let Children <span class='text-red-600'>LIVE</span>",
-                    "Americans Let Children <span class='text-red-600'>LIVE</span>",
-                    "Patriots Let Children <span class='text-red-600'>LIVE</span>",
-                    "Mothers Let Children <span class='text-red-600'>LIVE</span>",
-                    "Fathers Let Children <span class='text-red-600'>LIVE</span>",
-                    "Grandmothers Let Children <span class='text-red-600'>LIVE</span>",
-                    "Grandfathers Let Children <span class='text-red-600'>LIVE</span>",
-                    "Soldiers Let Children <span class='text-red-600'>LIVE</span>",
-                    "Students Let Children <span class='text-red-600'>LIVE</span>"
-                ];
-
-                const firestoreSupporters = [];
-                querySnapshot.forEach((doc) => {
-                    firestoreSupporters.push(doc.data().name);
-                });
-
-                const combinedSupporters = [...staticSupporters, ...firestoreSupporters];
-
-                if (combinedSupporters.length > 0) {
-                    combinedSupporters.forEach(supporterName => {
-                        const supporterP = document.createElement('p');
-                        supporterP.classList.add('p-2', 'bg-zinc-50', 'rounded-md', 'shadow-sm');
-                        supporterP.innerHTML = supporterName;
-                        supportersList.appendChild(supporterP);
-                    });
-                } else {
-                    supportersList.innerHTML = '<p class="text-center text-zinc-400">No supporters yet. Be the first!</p>';
-                }
-            });
-
-            // Handle form submission
-            form.addEventListener('submit', async (e) => {
-                e.preventDefault();
-                const supporterName = nameInput.value.trim();
-
-                if (supporterName) {
-                    try {
-                        await addDoc(collection(db, publicCollectionPath), {
-                            name: supporterName,
-                            timestamp: new Date()
-                        });
-                        nameInput.value = '';
-                        formMessage.textContent = 'Thank you for joining!';
-                        formMessage.classList.remove('text-red-500');
-                        formMessage.classList.add('text-green-500');
-                    } catch (e) {
-                        console.error("Error adding document: ", e);
-                        formMessage.textContent = "Error joining. Please try again.";
-                        formMessage.classList.remove('text-green-500');
-                        formMessage.classList.add('text-red-500');
-                    }
-                }
-            });
-        };
-
-        // Start the authentication process on page load
-        window.onload = handleAuth;
-    </script>
+    <!-- New Footer -->
+    <footer class="w-full text-center mt-12 py-4 text-zinc-500 text-sm border-t border-zinc-700">
+        LetChildrenLive.org - Because every child’s right to life is non-negotiable.
+    </footer>
 </body>
 </html>
+
